@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class MenuScript : MonoBehaviour
 {
     [SerializeField] GameObject MenuHolder;
-    [SerializeField] GameObject AboutHolder;
     [SerializeField] GameObject HowToPlayHolder;
     void Start()
     {
@@ -16,21 +15,12 @@ public class MenuScript : MonoBehaviour
     public void BackButton()
     {
         MenuHolder.SetActive(true);
-        AboutHolder.SetActive(false);
-        HowToPlayHolder.SetActive(false);
-    }
-
-    public void AboutButton()
-    {
-        MenuHolder.SetActive(false);
-        AboutHolder.SetActive(true);
         HowToPlayHolder.SetActive(false);
     }
 
     public void HowToPlayButton()
     {
         MenuHolder.SetActive(false);
-        AboutHolder.SetActive(false);
         HowToPlayHolder.SetActive(true);
     }
 

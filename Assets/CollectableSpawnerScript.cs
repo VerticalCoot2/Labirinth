@@ -9,7 +9,7 @@ public class CollectableSpawnerScript : MonoBehaviour
     [SerializeField] GameObject colPrefab;
     
 
-    List<int> usedIndex;
+    List<int> usedIndex = new List<int>();
 
     void Awake()
     {
