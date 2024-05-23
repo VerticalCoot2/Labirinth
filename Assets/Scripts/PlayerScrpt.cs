@@ -18,14 +18,12 @@ public class PlayerScrpt : MonoBehaviour
     [SerializeField] private Animator WinTextAnim2;
     [SerializeField] private Animator WinTextAnim3;
 
-
     [Header("End Gate Assets")]
     [SerializeField] GameObject endGateHolder;
     [SerializeField] GameObject[] gs = new GameObject[4];
     [SerializeField] GameObject[] doorz = new GameObject[4];
 
     bool enterMenu = false;
-
 
     void Awake()
     {
@@ -55,12 +53,7 @@ public class PlayerScrpt : MonoBehaviour
             collectibles++;
             int rand = Random.Range(0, 3);
             gs[rand].SetActive(true);
-            doorz[rand].SetActive(false);
-            AudioSource au = gs[rand].GetComponent<AudioSource>();
-            if(au != null)
-            {
-                au.Play();
-            }            
+            doorz[rand].SetActive(false);            
         }
         switch(enterMenu)
         {
